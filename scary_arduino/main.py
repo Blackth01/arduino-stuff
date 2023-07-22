@@ -9,8 +9,8 @@ SERIAL_PORT = '/dev/ttyACM0'
 BAUD_RATE = 9600
 
 # Images file paths
-IMAGE_FILE_NORMAL = 'normal_img.png'
-IMAGE_FILE_SCARY = 'scary_img.png'
+IMAGE_FILE_NORMAL = 'assets/normal_img.png'
+IMAGE_FILE_SCARY = 'assets/scary_img.png'
 
 # Creating main window
 window = tk.Tk()
@@ -43,7 +43,7 @@ def change_image(arduino, canvas, current_image, current_mode):
 
         if arduino_input == 'S':
             if current_mode == "NOT_SCARY":
-                mixer.music.load("scary_sound.mp3")
+                mixer.music.load("assets/scary_sound.mp3")
                 mixer.music.play()
                 canvas.itemconfig(current_image, image=image_scary)
                 current_mode = "SCARY"
