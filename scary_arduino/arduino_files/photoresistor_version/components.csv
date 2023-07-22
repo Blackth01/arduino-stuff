@@ -1,0 +1,6 @@
+﻿Name,Quantity,Component
+"Dred_led",1,"Red LED"
+"Rldr_resistor",1,"10 kΩ Resistor"
+"Rled_resistor",1,"330 kΩ Resistor"
+"U1",1," Arduino Uno R3"
+"Rldr_sensor",1," Photoresistor"
