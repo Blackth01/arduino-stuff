@@ -3,7 +3,7 @@
 int triggerPin = 3;
 int echoPin = 5;
 int ledPin = 10;
-int divisorValue = 1000; // If the distance is higher than that value, it sends one signal through serial, otherwise, sends another
+int divisorValue = 100; // If the distance is higher than that value, it sends one signal through serial, otherwise, sends another
 float centimeters_distance;
 
 Ultrasonic ultrasonic(triggerPin, echoPin);
@@ -19,7 +19,7 @@ void loop()
   centimeters_distance = ultrasonic.read();
   //Serial.print("Distance in centimeters: ");
   //Serial.println(centimeters_distance);
-  if (centimeters_distance > 100)
+  if (centimeters_distance > divisorValue)
   {
     digitalWrite(ledPin, LOW);
     Serial.print("N");
